@@ -1,19 +1,22 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
-const CartWidget = () => {
+const Checkout = () => {
   const { cart } = useContext(CartContext);
 
   return (
     <div>
-      <h2>Carrito</h2>
+      <h2>Checkout</h2>
       <ul>
         {cart.map((item, index) => (
-          <li key={index}>{item.nombre} - ${item.precio}</li>
+          <li key={index}>
+            {item.nombre} - ${item.precio}
+          </li>
         ))}
       </ul>
+      <button>Finalizar Compra</button>
     </div>
   );
 };
 
-export default CartWidget;
+export default Checkout;

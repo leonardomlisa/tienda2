@@ -1,19 +1,22 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
-const CartWidget = () => {
+const Brief = () => {
   const { cart } = useContext(CartContext);
 
   return (
     <div>
-      <h2>Carrito</h2>
+      <h2>Detalle de la Compra</h2>
       <ul>
         {cart.map((item, index) => (
-          <li key={index}>{item.nombre} - ${item.precio}</li>
+          <li key={index}>
+            {item.nombre} - ${item.precio}
+          </li>
         ))}
       </ul>
+      <p>Total: ${cart.reduce((total, item) => total + item.precio, 0)}</p>
     </div>
   );
 };
 
-export default CartWidget;
+export default Brief;
