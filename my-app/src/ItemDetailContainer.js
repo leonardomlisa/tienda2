@@ -8,10 +8,11 @@ const DetalleProducto = () => {
   useEffect(() => {
 
     const figuras = [
-      { id: 1, nombre: 'Figura de Goku', precio: 150, descripcion: 'Figura de Goku en Super Saiyan', imagen: '/image/batmanhottoys.jpg', empresa: 'Hot Toys' },
-      { id: 2, nombre: 'Figura de Naruto', precio: 200, descripcion: 'Figura de Naruto en modo Sennin', imagen: '/image/naruto.jpg', empresa: 'Sideshow' },
-      { id: 3, nombre: 'Figura de Batman', precio: 300, descripcion: 'Figura de Batman de The Dark Knight', imagen: '/image/batman.jpg', empresa: 'Hot Toys' },
-      // Agrega más figuras aquí
+      { id: 1, nombre: 'Figura de Goku', precio: 150000, descripcion: 'Figura de Goku en Super Saiyan', imagen: goku, empresa: 'figura' },
+      { id: 2, nombre: 'Figura de Naruto', precio: 200000, descripcion: 'Figura de Naruto en modo Sennin', imagen: naruto, empresa: 'figura2' },
+      { id: 3, nombre: 'Figura de Batman', precio: 700000, descripcion: 'Figura de Batman de The Dark Knight', imagen: batmanHotToys, empresa: 'Hot Toys' },
+      { id: 4, nombre: 'Figura de Batman 2', precio: 500000, descripcion: 'Figura de Batman de The Dark Knight', imagen: batmanIronStudios, empresa: 'Iron Studios' },
+      { id: 5, nombre: 'Figura de Batman 3', precio: 900000, descripcion: 'Figura de Batman de The Dark Knight', imagen: batmanSideshow, empresa: 'Sideshow' },
     ];
     const figuraEncontrada = figuras.find(f => f.id === parseInt(id));
     setFigura(figuraEncontrada);
